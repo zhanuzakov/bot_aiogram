@@ -76,3 +76,7 @@ async def handle_photos(message: types.Message):
         await message.reply(f"{highest_score_label}")
     else:
         await message.reply("Не удалось определить содержимое изображения.")
+
+@user_private_router.message(F.text)
+async def echo_message(message: types.Message):
+    pass
